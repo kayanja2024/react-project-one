@@ -8,7 +8,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "^3.4.4",
+    "serverless-http": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start && node server.js",
