@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && NODE_OPTIONS=--openssl-legacy-provider npm run build"
   publish = "client/build"
 
 [context.production.environment]
