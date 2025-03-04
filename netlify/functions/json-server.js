@@ -1,9 +1,12 @@
-const jsonServer = require("json-server");
+// netlify/functions/json-server.js
+
+const jsonServer = require('json-server');
+const path = require('path');
 const server = jsonServer.create();
-const router = jsonServer.router("db.json"); // Your JSON data file
+const router = jsonServer.router(path.join(__dirname, '../../data/db.json')); // Point to db.json in the data folder
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 server.use(router);
 
-module.exports = server;
+module.exports.handler = serverless(server);
