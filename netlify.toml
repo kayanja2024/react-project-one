@@ -1,5 +1,4 @@
 [build]
-  [build]
   command = "NODE_OPTIONS=--openssl-legacy-provider npm run build"
   publish = "client/build"
 
@@ -14,3 +13,4 @@
   from = "/api/*"
   to = "/.netlify/functions/json-server/:splat"
   status = 200
+
